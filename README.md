@@ -1,1 +1,9 @@
-# Production_Drone_Height
+# Plant height defined growth curves during vegetative development have the potential to predict end of season maize yield and assist with mid-season management decisions 
+
+## This study used plant heights extracted from UAV images to evaluate growth patterns and environmental responsiveness in maize and their relationship with grain yield
+
+Matlab_scripts is a folder containing scripts used in MATLAB R2020a for plant height extraction. The script used directly for extracting heights AvgPHTwGroundBins_GroundDiff_v3.m is in this folder. This folder also includes the script for sub-setting the entire geotiff into the plot of interest (PHT_PlotSubset_v2.m) which is called on by the other scripts and never used independently and the scripts used to submit all of the iterations needed to run these scripts. All matlab scripts used to extract red green blue values (RGB_Values.m, FieldClassificationKMeans.m, Ortho_PlotSubset_FromField_Classified_RGB.m) are also included within this folder.
+
+Production_Analysis.Rmd is an Rmarkdown document that contains all R scripts and bash scripts used in the analysis of the plant height and red, green, blue color value data. This is split into 3 sections based on function and analysis location. These three sections are as follows: 1 - Scripts for quality control and early data visualization; 2 - Scripts for data analysis including machine learning; 3 - Scripts for visualization of results.
+
+Raw_Data is a folder that contains all raw data by year including extracted plant height data, GCP coordinate locations, plot GPS locations, and plot order files. The All folder contains extracted red, green, blue values for each plot as well as the segmentation masks used in extracting those RGB values. 
